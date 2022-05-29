@@ -18,8 +18,8 @@ body{
     gap: 30px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px 1px lightslategray;
-
 }
+
 .sketch-container{
     border: 2px solid black;
     width: 500px;
@@ -57,8 +57,4 @@ button{
 }
 .sketch-container{
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
 } 
- /* .sketch-cell{
-border: 1px solid black;
-} */
