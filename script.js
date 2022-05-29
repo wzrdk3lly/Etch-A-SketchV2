@@ -1,4 +1,5 @@
 // Create a contianer for where the etch-a-sketch drawing will be 
+console.log("connected")
 
 // create js code that generates a 16X16 grid
     // break it down into creating a loop that creates a 2x2. 
