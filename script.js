@@ -1,11 +1,19 @@
 //grid to originally start with
 generateGrid();
 acitvateSketch();
+activateBtnClear();
 
 
 
-function btnClear(){
-    document.querySelector
+function activateBtnClear(){
+    const button = document.querySelector(".clear")
+    const cells = document.querySelectorAll(".sketch-cell")
+    button.addEventListener("click", () => {
+        cells.forEach((cell) => {
+            cell.style.backgroundColor = null;
+        });
+    })
+   
 }
 //Make the hover effect by adding event listeners to each of the divs. 
 // when someone hovers over any of the `sketch-pieces` it will change the background color
