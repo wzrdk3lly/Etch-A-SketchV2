@@ -1,8 +1,33 @@
 //grid to originally start with
 generateGrid();
+
 acitvateSketch();
+
 activateBtnClear();
 
+acitvateBtnResize();
+
+
+
+
+function acitvateBtnResize(){
+    const button = document.querySelector(".resize")
+
+    button.addEventListener('click',() => {
+        const cellsToRemove = document.querySelectorAll(".sketch-cell");
+        cellsToRemove.forEach((cell) => {
+            cell.remove();
+        })
+
+
+        userInput = Number(prompt("Enter the size of your grid. ie. enter '3' for a 3x3 grid "));
+        generateGrid(userInput);
+        acitvateSketch();
+        activateBtnClear();
+    });
+
+    
+}
 
 
 function activateBtnClear(){
@@ -13,7 +38,6 @@ function activateBtnClear(){
             cell.style.backgroundColor = null;
         });
     })
-   
 }
 //Make the hover effect by adding event listeners to each of the divs. 
 // when someone hovers over any of the `sketch-pieces` it will change the background color
@@ -28,8 +52,8 @@ cells.forEach((cell) => {
 }
 
 
-function generateGrid(){
-    const rows = 16;
+function generateGrid(rows=16){
+
     const columns = rows;
     const totalNumberOfCells = rows * rows;
 
