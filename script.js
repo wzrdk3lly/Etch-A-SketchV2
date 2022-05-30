@@ -7,6 +7,25 @@ activateBtnClear();
 
 acitvateBtnResize();
 
+activateBtnRandomize();
+
+   
+// The color used to color the board will be randomized.
+
+function activateBtnRandomize() {
+    const colors = ["red","blue","green","yellow", "orange", "white",];
+
+    const button = document.querySelector(".randomize");
+
+    button.addEventListener('click', () => {
+        let randomNum = Math.floor((Math.random() * colors.length));
+
+        randomColor = colors[randomNum];
+        acitvateSketch(randomColor);
+    })
+
+}
+
 
 // The user can change the size of sketch board
 function acitvateBtnResize(){
@@ -18,9 +37,9 @@ function acitvateBtnResize(){
         // Do nothing if the cancel button is selected, otherwise resize
         if (userInput === null) {}
         else{
-            //convert to number
             userInput = Number(userInput);
-            console.log(userInput);
+
+            // perform error handling
             if (isNaN(userInput)|| userInput <= 0 || userInput > 100){
                 alert("Sorry you need to enter a valid number")
             }
